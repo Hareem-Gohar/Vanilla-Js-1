@@ -1,16 +1,17 @@
 const data = [
     {
         id: 0,
-        name: "Subhan",
-        status: "Graduated",
+        name: "Rabi ",
+        status: "In Progress",
         university: "GCUF",
     },
     {
         id: 1,
-        name: "Rao",
-        status: "In Progress",
+        name: "Ali",
+        status: "Graduated",
         university: "GCUF",
     },
+
     {
         id: 2,
         name: "Rida",

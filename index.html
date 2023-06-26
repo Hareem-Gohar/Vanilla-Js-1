@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=., initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -12,38 +15,65 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Record Searching </title>
     <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+            color: aliceblue;
+            font-weight: 900;
+            background-color: #280e53;
+        }
+
         .cards {
-            border: 15px solid rgb(63, 75, 243);
-            border-radius: 3px;
+            border: 5px solid white;
+            border-radius: 10px;
             text-align: center;
             font-size: large;
-            background: linear-gradient(to right, #4776e6, #8e54e9);
+            /* background: linear-gradient(to right, #b9b9b9, #4406a8); */
             color: rgb(255, 255, 255);
+        }
+
+        .input-data {
+            width: 60%;
+            height: 10%;
+            background-color: #3e206e;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            color: #f3f4f7;
+        }
+
+        ::placeholder {
+            color: white;
+            font-size: large;
         }
     </style>
 </head>
 
 <body>
+    <h2 class="text-center mt-5 ">Record Searching Engine</h2>
     <!-- Search-Bar -->
-    <div class=" container d-flex justify-content-between mt-4 col-lg-6 col-md-10 col-12">
-        <input type="text" class="border p-3 rounded-2 w-100" style=" outline: none;" placeholder="Search here...."
-            id="Search">
-        <button class=" bg-primary rounded-2 border-0 p-3" onclick="searchFunc()"><i
-                class="fa-solid fa-magnifying-glass" style="color: #f3f4f7;"></i></button>
+    <div class=" container  input-data  d-flex justify-content-between mt-4 col-lg-6 col-md-10 col-12 ">
+        <input type="text" class="bg-transparent p-3 rounded-2 w-100 " placeholder="Search here...." id="Search">
+        <button class=" bg-transparent rounded-2 border-0 p-3" onclick="searchFunc()"><i
+                class="fa-solid fa-magnifying-glass" style="color:orangered;"></i></button>
     </div>
     <!-- Radio-Checks -->
-    <div class=" d-flex justify-content-center fs-6  mt-3 lead">
-        <div class=" m-2">
+    <div class=" d-flex justify-content-center fs-4  mt-3 lead">
+        <div class=" m-3">
             <input class="form-check-input" type="checkbox" name="statusCheckbox" value="Graduated"
                 onchange="filterByStatus(event)">
             <label class="form-check-label">Graduated</label>
         </div>
-        <div class="m-2">
+        <div class="m-3">
             <input class="form-check-input" type="checkbox" name="statusCheckbox" value="In Progress"
                 onchange="filterByStatus(event)">
             <label class="form-check-label">In Progress</label>
         </div>
-        <div class="m-2">
+        <div class="m-3">
             <input class="form-check-input" type="checkbox" name="statusCheckbox" value="Not Graduated"
                 onchange="filterByStatus(event)">
             <label class="form-check-label">Not Graduated</label>
